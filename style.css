@@ -1,0 +1,70 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #333;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones */
+section {
+    margin: 30px auto;
+    padding: 25px;
+    width: 85%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el mouse */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* Enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}

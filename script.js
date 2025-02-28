@@ -27,7 +27,6 @@ sections.forEach(section => {
 
 
 
-
 // Validación del formulario de contacto
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();

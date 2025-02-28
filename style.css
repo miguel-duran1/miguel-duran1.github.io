@@ -103,6 +103,9 @@ footer .social-links a:hover {
     color: #4ca1af;
 }
 
+
+
+
 /* Estilos para las tarjetas de proyectos */
 .project-grid {
     display: grid;
@@ -141,7 +144,6 @@ footer .social-links a:hover {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: none;
 }
 
 .contact form button {

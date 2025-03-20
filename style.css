@@ -87,9 +87,9 @@ header nav ul li a:hover {
 /* Secciones comunes */
 section {
     margin: 30px auto;
-    padding: 25px;
+    padding: 3px;
     width: 85%;
-    max-width: 800px;
+    max-width: 1299px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -189,7 +189,7 @@ section:hover {
 
 .project-card h3 {
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #2c3e50;
 }
 

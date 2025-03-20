@@ -87,7 +87,7 @@ header nav ul li a:hover {
 /* Secciones comunes */
 section {
     margin: 30px auto;
-    padding: 3px;
+    padding: 17px;
     width: 85%;
     max-width: 1299px;
     background-color: white;
@@ -116,7 +116,7 @@ section:hover {
 
 /* Habilidades */
 .skills {
-    padding: 30px 20px;
+    padding: 30px 15px;
     background: white;
 }
 

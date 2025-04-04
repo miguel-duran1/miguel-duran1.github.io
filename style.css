@@ -535,66 +535,179 @@ section h2::after {
     transform: translateY(0);
 }
 
-/* Experiencia */
+/* Experiencia Profesional */
 .experience {
-    padding: 40px 20px;
-    background: #f9f9f9;
-}
-
-.experience h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #2c3e50;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.experience-card {
+    padding: 40px 25px;
     background: white;
-    padding: 25px;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border-left: 4px solid #4ca1af;
 }
 
-.experience-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.experience-icon {
-    font-size: 2.5rem;
-    color: #4ca1af;
+.experience-header {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.experience-card h3 {
-    font-size: 1.5rem;
+.experience-header h3 {
+    font-size: 1.3rem;
     color: #2c3e50;
+    margin: 0;
+}
+
+.experience-date {
+    background: rgba(76, 161, 175, 0.15);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.experience-details {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.experience-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4ca1af;
+    font-weight: bold;
+}
+
+/* Formación Académica */
+.education {
+    padding: 40px 25px;
+    background: white;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #2c3e50;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-.experience-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
+.education-header h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 0;
 }
 
-.experience-card.animated {
-    opacity: 1;
-    transform: translateY(0);
+.education-institution {
+    background: rgba(44, 62, 80, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.education-details {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0 0 0;
+}
+
+.education-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.education-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.education-details li strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .experience-header, .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .experience-item, .education-item {
+        padding: 20px 15px;
+    }
+    
+    .experience-header h3, .education-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .experience-date, .education-institution {
+        font-size: 0.8rem;
+    }
 }
 
 /* Formulario de contacto */
@@ -937,5 +1050,242 @@ body.dark-mode footer {
     
     .skill-badge i {
         font-size: 1rem;
+    }
+}
+
+/* Timeline para la página de experiencia */
+#timeline-container {
+    padding: 40px 20px;
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    border-radius: 2px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    width: 3px;
+    background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+    border-radius: 5px;
+}
+
+.timeline-entry {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 100px;
+}
+
+.timeline-entry:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border-left: 4px solid #4ca1af;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+    padding-bottom: 10px;
+}
+
+.timeline-content h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+}
+
+.experience-header, .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.experience-date, .education-institution {
+    background: rgba(76, 161, 175, 0.15);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.experience-details, .education-details {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.experience-details li, .education-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.experience-details li::before, .education-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4ca1af;
+    font-weight: bold;
+}
+
+.education-content .education-item {
+    margin-bottom: 15px;
+    border-left: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.education-content .education-item:hover {
+    transform: none;
+}
+
+.education-languages {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(44, 62, 80, 0.1);
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 30px;
+    }
+    
+    .timeline-entry {
+        padding-left: 60px;
+    }
+    
+    .timeline-icon {
+        left: 29px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .experience-header, .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-date, .education-institution {
+        margin-top: 5px;
+    }
+    
+    .skill-tags {
+        gap: 6px;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 4px 10px;
     }
 }

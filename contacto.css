@@ -71,6 +71,7 @@ p {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #main-header nav ul li a {
@@ -79,13 +80,16 @@ p {
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
-    padding: 5px 0;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(76, 161, 175, 0.1);
+    letter-spacing: 0.5px;
 }
 
 #main-header nav ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 2px;
@@ -94,7 +98,10 @@ p {
 }
 
 #main-header nav ul li a:hover {
-    color: #4ca1af;
+    color: #ffffff;
+    background: rgba(76, 161, 175, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #main-header nav ul li a:hover::after {
@@ -565,11 +572,13 @@ footer .social-links a:hover {
     }
 
     #main-header nav ul {
-        gap: 15px;
+        gap: 12px;
+        margin-top: 8px;
     }
 
     #main-header nav ul li a {
         font-size: 0.9rem;
+        padding: 6px 12px;
     }
 
     .contact {
@@ -761,5 +770,55 @@ body.dark-mode footer {
     
     .skill-badge i {
         font-size: 1rem;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #4ca1af;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    border-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
     }
 }

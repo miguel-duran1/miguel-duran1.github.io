@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Proyectos - Miguel Durán</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="proyectos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -43,55 +44,115 @@
         </nav>
     </header>
 
-    <main>
-        <section class="projects">
-            <h2>Proyectos</h2>
-            <div class="project-grid">
+    <main style="padding-top: 20px;">
+        <section class="projects-section fade-in-section">
+            <h2 class="projects-title">Mis Proyectos Destacados</h2>
+            
+            <div class="projects-container">
                 <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <h3>Hotel Management Pro</h3>
-                    <p>Desarrollé una aplicación de gestión hotelera con Laravel (backend) y Vue.js (frontend). Usé Docker para la base de datos e implementé módulos para administradores, recepcionistas y clientes, junto con una API RESTful para una comunicación eficiente.</p>
-                    <a href="https://gitlab.com/fespin1/grup04-hotels" target="_blank" class="project-link">
-                        <i class="fab fa-gitlab"></i> Ver en GitLab
-                    </a>
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hotel Management Pro</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                            <span class="tech-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                            <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+                        </div>
+                        <p>Desarrollé una aplicación de gestión hotelera con Laravel (backend) y Vue.js (frontend). Usé Docker para la base de datos e implementé módulos para administradores, recepcionistas y clientes, junto con una API RESTful para una comunicación eficiente.</p>
+                        <div class="project-links">
+                            <a href="https://gitlab.com/fespin1/grup04-hotels" target="_blank" class="project-link">
+                                <i class="fab fa-gitlab"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <h3>Advanced Web Solution Hotel</h3>
-                    <p>Creé una aplicación web escalable con Laravel (backend) y Vue.js (frontend). Configuré Docker para la base de datos y me enfoqué en una arquitectura limpia, funcionalidades avanzadas y una interfaz intuitiva para mejorar la experiencia del usuario.</p>
-                    <a href="https://gitlab.com/mduran8/grup-4-miguel-duran" target="_blank" class="project-link">
-                        <i class="fab fa-gitlab"></i> Ver en GitLab
-                    </a>
-                </div>
-
-                <!-- Proyecto 4 -->
-                <div class="project-card">
-                    <h3>AFA Santa Coloma</h3>
-                    <p>Desarrollé el sitio web de AFA Santa Coloma con Elementor en WordPress, creando una plataforma moderna, responsive y alineada con la identidad de la escuela.</p>
-                    <a href="https://afasantacoloma.cat/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Visitar Sitio Web
-                    </a>
-                </div>
-
-                <!-- Proyecto 5 -->
-                <div class="project-card">
-                    <h3>Taverna Gaudir</h3>
-                    <p>Diseñé y desarrollé el sitio web de Taverna Gaudir usando Avada en WordPress, destacando su oferta gastronómica con un diseño atractivo y fácil de navegar.</p>
-                    <a href="https://tavernagaudir.com/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Visitar Sitio Web
-                    </a>
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Advanced Web Solution Hotel</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                            <span class="tech-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                            <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+                        </div>
+                        <p>Creé una aplicación web escalable con Laravel (backend) y Vue.js (frontend). Configuré Docker para la base de datos y me enfoqué en una arquitectura limpia, funcionalidades avanzadas y una interfaz intuitiva para mejorar la experiencia del usuario.</p>
+                        <div class="project-links">
+                            <a href="https://gitlab.com/mduran8/grup-4-miguel-duran" target="_blank" class="project-link">
+                                <i class="fab fa-gitlab"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Proyecto 3 -->
-                <div class="project-card">
-                    <h3>Subhastes Fralmi</h3>
-                    <p>Desarrollo de una plataforma de subastas en línea. Este proyecto incluye funcionalidades como la creación de subastas, pujas en tiempo real y gestión de usuarios.</p>
-                    <a href="https://gitlab.com/fespin1/subhastes-fralmi" target="_blank" class="project-link">
-                        <i class="fab fa-gitlab"></i> Ver en GitLab
-                    </a>
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AFA Santa Coloma</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+                            <span class="tech-tag"><i class="fas fa-puzzle-piece"></i> Elementor</span>
+                            <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                        </div>
+                        <p>Desarrollé el sitio web de AFA Santa Coloma con Elementor en WordPress, creando una plataforma moderna, responsive y alineada con la identidad de la escuela.</p>
+                        <div class="project-links">
+                            <a href="https://afasantacoloma.cat/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visitar sitio
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Proyecto 4 -->
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Taverna Gaudir</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+                            <span class="tech-tag"><i class="fas fa-palette"></i> Avada</span>
+                            <span class="tech-tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                        </div>
+                        <p>Diseñé y desarrollé el sitio web de Taverna Gaudir usando Avada en WordPress, destacando su oferta gastronómica con un diseño atractivo y fácil de navegar.</p>
+                        <div class="project-links">
+                            <a href="https://tavernagaudir.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visitar sitio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Subhastes Fralmi</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> SQL</span>
+                        </div>
+                        <p>Desarrollo de una plataforma de subastas en línea. Este proyecto incluye funcionalidades como la creación de subastas, pujas en tiempo real y gestión de usuarios.</p>
+                        <div class="project-links">
+                            <a href="https://gitlab.com/fespin1/subhastes-fralmi" target="_blank" class="project-link">
+                                <i class="fab fa-gitlab"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -140,6 +201,13 @@
             images.forEach(img => {
                 img.addEventListener('load', adjustFooter);
             });
+            
+            // Animación de secciones
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                section.classList.add('visible');
+            });
+            
             // Aplicar inmediatamente y luego nuevamente después de un retraso
             adjustFooter();
             setTimeout(adjustFooter, 500);

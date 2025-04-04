@@ -725,7 +725,7 @@ body.dark-mode footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -819,6 +819,15 @@ body.dark-mode footer {
     padding-right: 0;
 }
 
+.header-intro {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -836,5 +845,11 @@ body.dark-mode footer {
         text-align: center;
         padding-left: 0;
         padding-right: 0;
+    }
+    
+    .header-intro {
+        font-size: 1.05rem;
+        padding: 0 15px;
+        margin-bottom: 15px;
     }
 }

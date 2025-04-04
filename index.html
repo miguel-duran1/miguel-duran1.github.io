@@ -2,16 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Miguel Durán - Portafolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <h1>Miguel Durán Navia</h1>
         <p>Nadador profesional y desarrollador en formación</p>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
@@ -21,65 +21,67 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2>Bienvenido a mi Portafolio</h2>
-                <p>Explora mi trabajo, experiencia y habilidades.</p>
-                <a href="#about" class="btn">Conóceme</a>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Bienvenido a mi Portafolio</h2>
+                    <p>Explora mi trabajo, experiencia y habilidades.</p>
+                    <a href="#about" class="btn">Conóceme</a>
+                </div>
+                <div class="hero-image">
+                    <img src="foto perfil juegos mediterraneo.jpg" alt="Miguel Durán">
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="foto perfil juegos mediterraneo.jpg" alt="Miguel Durán">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <h2>Sobre mí</h2>
-        <div class="about-content">
-            <p>Soy Técnico Superior en Desarrollo de Aplicaciones Web y busco seguir creciendo en el mundo de la informática. Me apasiona aprender nuevas tecnologías y aplicar mis conocimientos en proyectos reales. Estoy listo para incorporarme al mundo laboral y aportar lo mejor de mí.</p>
-        </div>
-    </section>
-
-    <section class="skills">
-        <h2>Habilidades Destacadas</h2>
-        <div class="skills-grid">
-            <!-- Desarrollo Web -->
-            <div class="skill-card">
-                <i class="fas fa-code skill-icon"></i>
-                <h3>Desarrollo Web</h3>
-                <p>Experiencia en HTML, CSS, JavaScript, Vue y Laravel. Desarrollo de aplicaciones web con enfoque Mobile First y estilos personalizados sin frameworks CSS.</p>
+        <section id="about" class="about">
+            <h2>Sobre mí</h2>
+            <div class="about-content">
+                <p>Soy Técnico Superior en Desarrollo de Aplicaciones Web y busco seguir creciendo en el mundo de la informática. Me apasiona aprender nuevas tecnologías y aplicar mis conocimientos en proyectos reales. Estoy listo para incorporarme al mundo laboral y aportar lo mejor de mí.</p>
             </div>
+        </section>
 
-            <!-- Back-End y API REST -->
-            <div class="skill-card">
-                <i class="fas fa-server skill-icon"></i>
-                <h3>Back-End y API REST</h3>
-                <p>Creación y consumo de APIs RESTful con Laravel. Uso de Laravel Sanctum para autenticación y Docker para gestión de entornos.</p>
-            </div>
+        <section class="skills">
+            <h2>Habilidades Destacadas</h2>
+            <div class="skills-grid">
+                <!-- Desarrollo Web -->
+                <div class="skill-card">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Experiencia en HTML, CSS, JavaScript, Vue y Laravel. Desarrollo de aplicaciones web con enfoque Mobile First y estilos personalizados sin frameworks CSS.</p>
+                </div>
 
-            <!-- Despliegue y Servidores -->
-            <div class="skill-card">
-                <i class="fas fa-cloud skill-icon"></i>
-                <h3>Despliegue y Servidores</h3>
-                <p>Configuración y despliegue en AWS EC2. Implementación de HTTPS con Let's Encrypt y configuración de dominios personalizados.</p>
-            </div>
+                <!-- Back-End y API REST -->
+                <div class="skill-card">
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3>Back-End y API REST</h3>
+                    <p>Creación y consumo de APIs RESTful con Laravel. Uso de Laravel Sanctum para autenticación y Docker para gestión de entornos.</p>
+                </div>
 
-            <!-- Control de Versiones -->
-            <div class="skill-card">
-                <i class="fas fa-code-branch skill-icon"></i>
-                <h3>Control de Versiones</h3>
-                <p>Uso avanzado de Git, GitHub y GitLab para versionado y colaboración en proyectos.</p>
-            </div>
+                <!-- Despliegue y Servidores -->
+                <div class="skill-card">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <h3>Despliegue y Servidores</h3>
+                    <p>Configuración y despliegue en AWS EC2. Implementación de HTTPS con Let's Encrypt y configuración de dominios personalizados.</p>
+                </div>
 
-            <!-- Gestión Hotelera -->
-            <div class="skill-card">
-                <i class="fas fa-hotel skill-icon"></i>
-                <h3>Gestión Hotelera</h3>
-                <p>Desarrollo de una plataforma de gestión hotelera con Laravel y Vue, incluyendo roles de usuarios, reservas personalizadas y pruebas unitarias.</p>
+                <!-- Control de Versiones -->
+                <div class="skill-card">
+                    <i class="fas fa-code-branch skill-icon"></i>
+                    <h3>Control de Versiones</h3>
+                    <p>Uso avanzado de Git, GitHub y GitLab para versionado y colaboración en proyectos.</p>
+                </div>
+
+                <!-- Gestión Hotelera -->
+                <div class="skill-card">
+                    <i class="fas fa-hotel skill-icon"></i>
+                    <h3>Gestión Hotelera</h3>
+                    <p>Desarrollo de una plataforma de gestión hotelera con Laravel y Vue, incluyendo roles de usuarios, reservas personalizadas y pruebas unitarias.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Miguel Durán</p>
@@ -90,5 +92,21 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Asegurar que el footer siempre esté en la parte inferior
+        function adjustFooter() {
+            const body = document.body;
+            const html = document.documentElement;
+            const height = Math.max(body.scrollHeight, body.offsetHeight, 
+                html.clientHeight, html.scrollHeight, html.offsetHeight);
+            
+            if (height < window.innerHeight) {
+                document.querySelector('footer').style.marginTop = `${window.innerHeight - height + 20}px`;
+            }
+        }
+        
+        window.addEventListener('load', adjustFooter);
+        window.addEventListener('resize', adjustFooter);
+    </script>
 </body>
 </html>

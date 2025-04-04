@@ -2,16 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Proyectos - Miguel Durán</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <h1>Miguel Durán Navia</h1>
         <p>Nadador profesional y desarrollador en formación</p>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
@@ -21,56 +21,58 @@
         </nav>
     </header>
 
-    <section class="projects">
-        <h2>Proyectos</h2>
-        <div class="project-grid">
-            <!-- Proyecto 1 -->
-            <div class="project-card">
-                <h3>Hotel Management Pro</h3>
-                <p>Desarrollé una aplicación de gestión hotelera con Laravel (backend) y Vue.js (frontend). Usé Docker para la base de datos e implementé módulos para administradores, recepcionistas y clientes, junto con una API RESTful para una comunicación eficiente.</p>
-                <a href="https://gitlab.com/fespin1/grup04-hotels" target="_blank" class="project-link">
-                    <i class="fab fa-gitlab"></i> Ver en GitLab
-                </a>
-            </div>
+    <main>
+        <section class="projects">
+            <h2>Proyectos</h2>
+            <div class="project-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <h3>Hotel Management Pro</h3>
+                    <p>Desarrollé una aplicación de gestión hotelera con Laravel (backend) y Vue.js (frontend). Usé Docker para la base de datos e implementé módulos para administradores, recepcionistas y clientes, junto con una API RESTful para una comunicación eficiente.</p>
+                    <a href="https://gitlab.com/fespin1/grup04-hotels" target="_blank" class="project-link">
+                        <i class="fab fa-gitlab"></i> Ver en GitLab
+                    </a>
+                </div>
 
-            <!-- Proyecto 2 -->
-            <div class="project-card">
-                <h3>Advanced Web Solution Hotel</h3>
-                <p>Creé una aplicación web escalable con Laravel (backend) y Vue.js (frontend). Configuré Docker para la base de datos y me enfoqué en una arquitectura limpia, funcionalidades avanzadas y una interfaz intuitiva para mejorar la experiencia del usuario.</p>
-                <a href="https://gitlab.com/mduran8/grup-4-miguel-duran" target="_blank" class="project-link">
-                    <i class="fab fa-gitlab"></i> Ver en GitLab
-                </a>
-            </div>
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <h3>Advanced Web Solution Hotel</h3>
+                    <p>Creé una aplicación web escalable con Laravel (backend) y Vue.js (frontend). Configuré Docker para la base de datos y me enfoqué en una arquitectura limpia, funcionalidades avanzadas y una interfaz intuitiva para mejorar la experiencia del usuario.</p>
+                    <a href="https://gitlab.com/mduran8/grup-4-miguel-duran" target="_blank" class="project-link">
+                        <i class="fab fa-gitlab"></i> Ver en GitLab
+                    </a>
+                </div>
 
-            <!-- Proyecto 4 -->
-            <div class="project-card">
-                <h3>AFA Santa Coloma</h3>
-                <p>Desarrollé el sitio web de AFA Santa Coloma con Elementor en WordPress, creando una plataforma moderna, responsive y alineada con la identidad de la escuela.</p>
-                <a href="https://afasantacoloma.cat/" target="_blank" class="project-link">
-                    <i class="fas fa-external-link-alt"></i> Visitar Sitio Web
-                </a>
-            </div>
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <h3>AFA Santa Coloma</h3>
+                    <p>Desarrollé el sitio web de AFA Santa Coloma con Elementor en WordPress, creando una plataforma moderna, responsive y alineada con la identidad de la escuela.</p>
+                    <a href="https://afasantacoloma.cat/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visitar Sitio Web
+                    </a>
+                </div>
 
-            <!-- Proyecto 5 -->
-            <div class="project-card">
-                <h3>Taverna Gaudir</h3>
-                <p>Diseñé y desarrollé el sitio web de Taverna Gaudir usando Avada en WordPress, destacando su oferta gastronómica con un diseño atractivo y fácil de navegar.</p>
-                <a href="https://tavernagaudir.com/" target="_blank" class="project-link">
-                    <i class="fas fa-external-link-alt"></i> Visitar Sitio Web
-                </a>
-            </div>
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <h3>Taverna Gaudir</h3>
+                    <p>Diseñé y desarrollé el sitio web de Taverna Gaudir usando Avada en WordPress, destacando su oferta gastronómica con un diseño atractivo y fácil de navegar.</p>
+                    <a href="https://tavernagaudir.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visitar Sitio Web
+                    </a>
+                </div>
 
-            <!-- Proyecto 3 -->
-            <div class="project-card">
-                <h3>Subhastes Fralmi</h3>
-                <p>Desarrollo de una plataforma de subastas en línea. Este proyecto incluye funcionalidades como la creación de subastas, pujas en tiempo real y gestión de usuarios.</p>
-                <a href="https://gitlab.com/fespin1/subhastes-fralmi" target="_blank" class="project-link">
-                    <i class="fab fa-gitlab"></i> Ver en GitLab
-                </a>
-            </div>
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <h3>Subhastes Fralmi</h3>
+                    <p>Desarrollo de una plataforma de subastas en línea. Este proyecto incluye funcionalidades como la creación de subastas, pujas en tiempo real y gestión de usuarios.</p>
+                    <a href="https://gitlab.com/fespin1/subhastes-fralmi" target="_blank" class="project-link">
+                        <i class="fab fa-gitlab"></i> Ver en GitLab
+                    </a>
+                </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Miguel Durán</p>
@@ -81,5 +83,21 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Asegurar que el footer siempre esté en la parte inferior
+        function adjustFooter() {
+            const body = document.body;
+            const html = document.documentElement;
+            const height = Math.max(body.scrollHeight, body.offsetHeight, 
+                html.clientHeight, html.scrollHeight, html.offsetHeight);
+            
+            if (height < window.innerHeight) {
+                document.querySelector('footer').style.marginTop = `${window.innerHeight - height + 20}px`;
+            }
+        }
+        
+        window.addEventListener('load', adjustFooter);
+        window.addEventListener('resize', adjustFooter);
+    </script>
 </body>
 </html>

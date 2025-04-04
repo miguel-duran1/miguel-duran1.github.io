@@ -7,36 +7,52 @@ body {
     background: linear-gradient(135deg, #2c3e50, #4ca1af);
     color: #333;
     text-align: center;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Encabezado */
-header {
+#main-header {
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
     font-size: 1.2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-header nav ul {
+#main-header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* Para que los elementos se ajusten en móviles */
+    flex-wrap: wrap;
 }
 
-header nav ul li a {
+#main-header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+#main-header nav ul li a:hover {
     color: #4ca1af;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
 }
 
 /* Hero Section */
@@ -96,6 +112,7 @@ section {
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 section:hover {
@@ -310,12 +327,14 @@ section:hover {
 
 /* Pie de página */
 footer {
-    margin-top: 20px;
+    margin-top: auto;
     padding: 15px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
     font-size: 0.9rem;
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer .social-links {
@@ -335,13 +354,35 @@ footer .social-links a:hover {
 
 /* Media Queries para móviles */
 @media (max-width: 768px) {
-    header {
-        padding: 15px;
+    #main-header {
+        padding: 15px 10px;
         font-size: 1rem;
+        position: sticky;
+        top: 0;
     }
 
-    header nav ul {
-        gap: 10px;
+    #main-header h1 {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    #main-header p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    #main-header nav ul {
+        gap: 8px;
+    }
+    
+    #main-header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        width: 90%;
+        padding: 20px;
+        margin: 15px auto;
     }
 
     .hero {
@@ -393,7 +434,7 @@ footer .social-links a:hover {
 
 /* Sección de contacto */
 .contact {
-    margin: 30px auto 120px;
+    margin: 30px auto;
     padding: 25px;
     width: 85%;
     max-width: 800px;
@@ -401,6 +442,7 @@ footer .social-links a:hover {
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .contact:hover {
@@ -424,7 +466,9 @@ footer .social-links a:hover {
 .contact-info {
     margin: 0 auto 20px; 
     text-align: left;
-    max-width: 400px; 
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-info p {
@@ -502,16 +546,28 @@ footer .social-links a:hover {
 
 /* Media Queries para móviles */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 0;
+    }
+
     .contact {
+        width: 90%;
         padding: 20px;
+        margin: 15px auto;
     }
 
     .contact h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 15px;
     }
 
     .welcome-message {
         font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .contact-info {
+        padding: 0 10px;
     }
 
     .contact-info ul li {
@@ -520,6 +576,5 @@ footer .social-links a:hover {
 
     .contact form input, .contact form textarea {
         font-size: 0.9rem;
-        resize: none;
     }
 }

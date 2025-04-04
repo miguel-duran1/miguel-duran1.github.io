@@ -49,18 +49,42 @@
     <script>
         // Asegurar que el footer siempre esté en la parte inferior
         function adjustFooter() {
-            const body = document.body;
-            const html = document.documentElement;
-            const height = Math.max(body.scrollHeight, body.offsetHeight, 
-                html.clientHeight, html.scrollHeight, html.offsetHeight);
+            const header = document.getElementById('main-header');
+            const main = document.querySelector('main');
+            const footer = document.querySelector('footer');
             
-            if (height < window.innerHeight) {
-                document.querySelector('footer').style.marginTop = `${window.innerHeight - height + 20}px`;
+            // Obtener alturas
+            const headerHeight = header.offsetHeight;
+            const mainHeight = main.offsetHeight;
+            const footerHeight = footer.offsetHeight;
+            const windowHeight = window.innerHeight;
+            
+            // Verificar si el contenido es menor que la altura de la ventana
+            const totalContentHeight = headerHeight + mainHeight + footerHeight;
+            
+            if (totalContentHeight < windowHeight) {
+                // Establecer el margen inferior del contenido principal para empujar el footer hacia abajo
+                const extraSpace = windowHeight - totalContentHeight;
+                main.style.marginBottom = `${extraSpace}px`;
+            } else {
+                main.style.marginBottom = '0';
             }
         }
         
+        // Ejecutar al cargar la página y cuando cambie el tamaño de la ventana
         window.addEventListener('load', adjustFooter);
         window.addEventListener('resize', adjustFooter);
+        
+        // También ajustar cuando cambien las imágenes (pueden afectar las alturas)
+        window.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', adjustFooter);
+            });
+            // Aplicar inmediatamente y luego nuevamente después de un retraso
+            adjustFooter();
+            setTimeout(adjustFooter, 500);
+        });
     </script>
 </body>
 </html>

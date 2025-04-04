@@ -709,3 +709,57 @@ body.dark-mode .welcome-message p {
 body.dark-mode footer {
     background: rgba(17, 24, 39, 0.95);
 }
+
+/* Badges de habilidades en el header */
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-badge {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #4ca1af, #2c3e50);
+}
+
+.skill-badge i {
+    font-size: 1.1rem;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    .skills-badges {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .skill-badge {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .skill-badge i {
+        font-size: 1rem;
+    }
+}

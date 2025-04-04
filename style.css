@@ -175,10 +175,25 @@ main {
 
 /* Hero Section */
 .hero {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #1a2a3a, #3a5f70);
+    position: relative;
     color: white;
     text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
+    z-index: 1;
 }
 
 .hero-content {
@@ -188,23 +203,37 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
+    background: rgba(44, 62, 80, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(76, 161, 175, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
 }
 
 .hero-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ffffff, #4ca1af);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
 .hero-text p {
     font-size: 1.2rem;
-    margin-bottom: 25px;
-    opacity: 0.9;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
 }
 
 .hero-text .btn {
@@ -673,11 +702,16 @@ footer .social-links a:hover {
     }
 
     .hero {
-        padding: 40px 15px;
+        padding: 50px 15px;
+        margin-bottom: 30px;
+    }
+
+    .hero-text {
+        padding: 20px;
     }
 
     .hero-text h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .hero-text p {

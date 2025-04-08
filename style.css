@@ -119,48 +119,38 @@ p {
     font-style: italic;
 }
 
+/* Navegación principal */
 #main-header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #main-header nav ul li a {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
     color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 8px 16px;
+    padding: 8px 20px;
     border-radius: 50px;
-    background: rgba(76, 161, 175, 0.1);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     letter-spacing: 0.5px;
 }
 
-#main-header nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #4ca1af;
-    transition: width 0.3s ease;
-}
-
 #main-header nav ul li a:hover {
-    color: #ffffff;
-    background: rgba(76, 161, 175, 0.3);
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#main-header nav ul li a:hover::after {
-    width: 100%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #4ca1af, #2c3e50);
 }
 
 /* Contenido principal */
@@ -826,13 +816,13 @@ footer .social-links a:hover {
     }
     
     #main-header nav ul {
-        gap: 12px;
-        margin-top: 8px;
+        gap: 10px;
+        margin-top: 15px;
     }
     
     #main-header nav ul li a {
+        padding: 6px 16px;
         font-size: 0.9rem;
-        padding: 6px 12px;
     }
 
     section {
@@ -999,12 +989,12 @@ body.dark-mode footer {
     font-size: 1.2rem;
 }
 
-/* Badges de habilidades en el header */
+/* Badges de habilidades en el header - Estilo más discreto */
 .skills-badges {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 25px;
     max-width: 800px;
     margin-left: auto;
@@ -1012,44 +1002,55 @@ body.dark-mode footer {
 }
 
 .skill-badge {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 6px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill-badge:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #4ca1af, #2c3e50);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .skill-badge i {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    opacity: 0.8;
 }
 
 /* Media Queries para móviles */
 @media (max-width: 768px) {
+    #main-header nav ul {
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    #main-header nav ul li a {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+    
     .skills-badges {
-        gap: 8px;
-        margin-bottom: 12px;
+        gap: 6px;
+        margin-bottom: 15px;
     }
     
     .skill-badge {
-        padding: 4px 10px;
+        padding: 3px 8px;
         font-size: 0.8rem;
     }
     
     .skill-badge i {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 

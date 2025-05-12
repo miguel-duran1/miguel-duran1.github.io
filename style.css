@@ -817,14 +817,26 @@ footer .social-links a:hover {
     
     #main-header nav ul {
         flex-wrap: nowrap;
-        overflow-x: hidden;
-        justify-content: center;
+        overflow-x: auto;
+        justify-content: flex-start;
         gap: 10px;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        white-space: nowrap;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #main-header nav ul::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
+    #main-header nav ul li {
+        flex: 0 0 auto;
     }
     
     #main-header nav ul li a {
-        background: linear-gradient(135deg, #2c3e50, #4ca1af);
-        color: white;
         padding: 6px 16px;
         font-size: 0.9rem;
     }

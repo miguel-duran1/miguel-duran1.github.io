@@ -680,6 +680,73 @@ section h2::after {
     font-weight: 600;
 }
 
+.education-content .education-item {
+    margin-bottom: 15px;
+    border-left: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.education-content .education-item:hover {
+    transform: none;
+}
+
+.education-languages {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(44, 62, 80, 0.1);
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skill-category h4 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.skill-category h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: #4ca1af;
+    border-radius: 2px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 768px) {
     .experience-header, .education-header {
         flex-direction: column;
@@ -813,6 +880,24 @@ footer .social-links a:hover {
     #main-header p {
         font-size: 0.9rem;
         margin-bottom: 10px;
+    }
+    
+    #main-header nav {
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    #main-header nav::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 20%;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(76, 161, 175, 0.8), transparent);
+        border-radius: 3px;
+        transform: translateX(var(--scroll-indicator-position, 0%));
+        transition: transform 0.1s ease-out;
     }
     
     #main-header nav ul {
@@ -1382,4 +1467,8 @@ body.dark-mode footer {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #4ca1af, #2c3e50);
+}
+
+:root {
+    --scroll-indicator-position: 0%;
 }

@@ -149,9 +149,34 @@
             }
         }
         
+        // Control del indicador de scroll para navegación móvil
+        function updateScrollIndicator() {
+            if (window.innerWidth <= 768) {
+                const navList = document.querySelector('#main-header nav ul');
+                const indicator = document.querySelector('#main-header nav::after');
+                
+                if (navList) {
+                    navList.addEventListener('scroll', function() {
+                        const maxScroll = navList.scrollWidth - navList.clientWidth;
+                        const currentScroll = navList.scrollLeft;
+                        const scrollPercentage = (currentScroll / maxScroll) * 80; // 80% del ancho disponible
+                        
+                        // Aplicar la transformación al pseudo-elemento
+                        document.documentElement.style.setProperty('--scroll-indicator-position', `${scrollPercentage}%`);
+                    });
+                }
+            }
+        }
+        
         // Ejecutar al cargar la página y cuando cambie el tamaño de la ventana
-        window.addEventListener('load', adjustFooter);
-        window.addEventListener('resize', adjustFooter);
+        window.addEventListener('load', function() {
+            adjustFooter();
+            updateScrollIndicator();
+        });
+        window.addEventListener('resize', function() {
+            adjustFooter();
+            updateScrollIndicator();
+        });
         
         // También ajustar cuando cambien las imágenes (pueden afectar las alturas)
         window.addEventListener('DOMContentLoaded', function() {
@@ -162,6 +187,9 @@
             // Aplicar inmediatamente y luego nuevamente después de un retraso
             adjustFooter();
             setTimeout(adjustFooter, 500);
+            
+            // Inicializar indicador de scroll
+            updateScrollIndicator();
         });
     </script>
 </body>

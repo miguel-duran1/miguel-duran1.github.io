@@ -1472,3 +1472,11 @@ body.dark-mode footer {
 :root {
     --scroll-indicator-position: 0%;
 }
+
+/* Título llamativo en el header */
+.headline-attract {
+    font-size: 1.5rem;
+    color: #4ca1af;
+    text-shadow: 0 2px 10px rgba(44, 62, 80, 0.18), 0 4px 20px rgba(76, 161, 175, 0.15);
+    display: inline-block;
+}
